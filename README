@@ -1,0 +1,58 @@
+         *Overview of the Application*
+
+The Number Properties API is a straightforward and efficient API designed to classify numbers based on their mathematical properties and provide an interesting fact about the number. It takes a number as input and returns information on whether the number is prime, perfect, or an Armstrong number, along with its digit sum and parity (odd/even). Additionally, it fetches a fun fact about the number from an external API.
+
+            *Features*
+Prime Number Check: Determines if a number is prime.
+
+Perfect Number Check: Identifies if a number is perfect.
+
+Armstrong Number Check: Checks if a number is an Armstrong number.
+
+Digit Sum Calculation: Calculates the sum of the digits of the number.
+
+Parity Classification: Classifies the number as odd or even.
+
+Fun Fact Retrieval: Fetches a fun fact about the number from the Numbers API.
+
+The application consists of several key components:
+
+app.js: The main entry point of the application where the server is configured and started.
+
+router.js: Handles routing and defines the endpoints.
+
+mainHandler.js: Contains the logic to process requests and generate responses.
+
+helpers.js: Provides utility functions to determine number properties.
+
+                *Setting Up the Server*
+The app.js file is responsible for setting up the Express server and loading environment variables.
+In the app.js, we import necessary modules, configure environment variables, and set up middleware. The server listens on a specified port and responds to requests at the root endpoint.
+
+                *Routing and Request Handling*
+The router.js file defines the routes and associates them with the appropriate handlers. Here, we define a route that uses the numberHandler function from mathHandler.js to process requests.
+
+
+       *Processing Requests in mathHandler.js*
+The mathHandler.js file contains the logic to handle incoming requests, validate input, and generate responses. This function validates the input, fetches a fun fact from an external API, and uses helper functions to determine the properties of the number.
+
+
+           *Utility Functions in helpers.js*
+The helpers.js file contains several utility functions to determine number properties. These functions check if a number is prime, perfect, or Armstrong, calculate the sum of its digits, and determine if it is odd or even.
+
+
+       *How It Works*
+1. The API receives a number as input.
+
+2. It validates the input to ensure it is a valid integer.
+
+3. It calculates the number's properties (prime, perfect, Armstrong, etc.).
+
+4. It fetches a fun fact from the Numbers API.
+
+5. The response is returned in a structured JSON format.
+
+
+
+Author
+Ishola Yunusa
